@@ -9,5 +9,7 @@
             "email": "behncke@sitegeist.de"
         }
     ],
-    "require": {}
+    "require": {
+        "slim/slim": "^3.12"
+    }
 }
