@@ -1,0 +1,13 @@
+{
+    "name": "sitegeist/game-of-nodes",
+    "description": "The war of the 5 kings in Neo4j",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wilhelm Behncke",
+            "email": "behncke@sitegeist.de"
+        }
+    ],
+    "require": {}
+}
