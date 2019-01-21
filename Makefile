@@ -6,10 +6,33 @@
 #                                VARIABLES                                    #
 ###############################################################################
 SHELL=/bin/bash
-export PATH := ./bin:$(PATH)
+PHP=docker-compose exec php php
+COMPOSER=docker-compose exec php composer
+export MAKE:=$(MAKE) -s
+
+
+list:
+	@grep '^[^#[:space:]].*:' Makefile
 
 ###############################################################################
 #                               APPLICATION                                   #
 ###############################################################################
-start:
-	php -S localhost:8000 -t src/
+install:
+	@$(MAKE) up
+	@$(COMPOSER) install
+	@$(MAKE) populate
+
+up:
+	@docker-compose up -d
+
+down:
+	@docker-compose down --remove-orphans
+
+restart:
+	@$(MAKE) down
+	@$(MAKE) up
+
+ssh:
+	@$(MAKE) up 2> /dev/null
+	@docker-compose exec php sh
+
