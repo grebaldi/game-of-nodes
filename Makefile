@@ -47,5 +47,17 @@ populate:
 ###############################################################################
 #                                 SCRIPTS                                     #
 ###############################################################################
-friend-or-foe:
+example-friend-or-foe:
 	@$(PHP) /app/src/friend-or-foe.php
+
+example-family:
+	@$(PHP) /app/src/family.php
+
+example-friends:
+	@$(PHP) /app/src/friends.php
+
+example-enemies:
+	@$(PHP) /app/src/enemies.php
+
+example-welcome-in:
+	@$(PHP) /app/src/welcome-in.php
