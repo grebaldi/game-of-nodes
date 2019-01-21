@@ -36,3 +36,11 @@ ssh:
 	@$(MAKE) up 2> /dev/null
 	@docker-compose exec php sh
 
+###############################################################################
+#                               DEVELOPMENT                                   #
+###############################################################################
+populate:
+	@$(MAKE) restart
+	@sleep 20
+	@$(PHP) /app/build/populate.php
+

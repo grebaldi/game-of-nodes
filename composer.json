@@ -10,6 +10,9 @@
         }
     ],
     "require": {
-        "slim/slim": "^3.12"
+        "graphaware/neo4j-php-client": "^4.0"
+    },
+    "require-dev": {
+        "symfony/yaml": "^4.2"
     }
 }
